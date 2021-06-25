@@ -1,5 +1,6 @@
 ---
  - name: "Doing Someting"
+   hosts: all
    tasks:
           # create a new file on each host
           - copy: 

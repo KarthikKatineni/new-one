@@ -15,11 +15,11 @@
         - name: File System
           filesystem: 
               fstype: xfs
-              dev   : /dev/mapper/test
+              dev   : /dev/mapper/vgdata-test
         - name: mount
           mount:
               name: /test
-              src : /dev/mapper/test
+              src : /dev/mapper/vgdata-test
               fstype: xfs
               state: mounted
                

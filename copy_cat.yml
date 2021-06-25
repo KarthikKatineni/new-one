@@ -1,5 +1,7 @@
   
-- name: Hello World Sample
-  hosts: all
-  ansible.builtin.shell:
-    cmd: ls -l
+- name: create a directory for apache tomcat
+  file:
+   path: /home/kat1245/kingpin123.txt
+   owner: kat1245
+   state: present
+   mode: 0755

@@ -1,7 +1,8 @@
-  
-- name: create a directory for apache tomcat
-  file:
-   path: /home/kat1245/kingpin123.txt
-   owner: kat1245
-   state: present
-   mode: 0755
+---
+ - name: Copy file with owner and permissions
+   ansible.builtin.copy:
+     src: /home/kat1245/file
+     dest: /home/kat1245/king/file1
+     owner: kat1245
+     group: kat1245
+     mode: '0744'

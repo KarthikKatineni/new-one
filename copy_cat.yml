@@ -1,8 +1,8 @@
 ---
- - name: Copy file with owner and permissions
-   ansible.builtin.copy:
-     src: /home/kat1245/file
-     dest: /home/kat1245/king/file1
-     owner: kat1245
-     group: kat1245
-     mode: '0744'
+ - name: "Doing Someting"
+   tasks:
+          # create a new file on each host
+          - copy: 
+                  content: "I am the king" 
+                  dest: /home/kat1245/file
+                  mode: 0644

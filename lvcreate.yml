@@ -1,0 +1,25 @@
+---
+ - name: creating lvm and extending lvm
+   hosts: all
+   user: root
+   tasks:
+        - name: vgcreate
+          lvg :
+              vg: vgdata
+              pvs: /dev/sdc1
+        - name: lvcreate
+          lvol:
+              vg: vgdata
+              lv: test
+              size: 1500M
+        - name: File System
+          filesystem: 
+              fstype: xfs
+              dev   : /dev/mapper/test
+        - name: mount
+          mount:
+              name: /test
+              src : /dev/mapper/test
+              fstype: xfs
+              state: mounted
+               

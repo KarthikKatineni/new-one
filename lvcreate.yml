@@ -16,7 +16,7 @@
          - name: File System
            filesystem:
               fstype: xfs
-               dev   : /dev/mapper/vgdata-test
+              dev   : /dev/mapper/vgdata-test
          - name: mount
            mount:
               name: /test

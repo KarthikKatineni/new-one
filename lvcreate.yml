@@ -1,10 +1,10 @@
 ---
- - name: creating lvm and extending lvm
-   hosts: all
-   user: root
-   tasks:
-        - name: vgcreate
-          lvg :
+ -  name: creating lvm and extending lvm
+    hosts: all
+    user: root
+    tasks: 
+         - name: vgcreate
+           lvg : 
               vg: vgdata
               pvs: /dev/sdc1
         - name: lvcreate

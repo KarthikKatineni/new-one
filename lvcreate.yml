@@ -7,17 +7,18 @@
            lvg : 
               vg: vgdata
               pvs: /dev/sdc1
-        - name: lvcreate
-          lvol:
+            
+         - name: lvcreate
+           lvol:
               vg: vgdata
               lv: test
               size: 1500M
-        - name: File System
-          filesystem:
+         - name: File System
+           filesystem:
               fstype: xfs
                dev   : /dev/mapper/vgdata-test
-        - name: mount
-          mount:
+         - name: mount
+           mount:
               name: /test
               src : /dev/mapper/vgdata-test
               fstype: xfs

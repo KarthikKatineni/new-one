@@ -12,7 +12,7 @@
            lvol:
               vg: vgdata
               lv: test
-              size: 1200M
+              size: 200M
          - name: File System
            filesystem:
               fstype: xfs

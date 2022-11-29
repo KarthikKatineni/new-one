@@ -12,7 +12,7 @@
            lvol:
               vg: vgdata
               lv: test
-              size: 1500M
+              size: 1200M
          - name: File System
            filesystem:
               fstype: xfs
@@ -23,3 +23,4 @@
               src : /dev/mapper/vgdata-test
               fstype: xfs
               state: mounted
+              
